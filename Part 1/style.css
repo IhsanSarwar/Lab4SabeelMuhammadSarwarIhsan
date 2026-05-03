@@ -1,0 +1,17 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333345;
+  margin: 0;
+  padding: 75px;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 6px solid #000000;
+}
+
+
