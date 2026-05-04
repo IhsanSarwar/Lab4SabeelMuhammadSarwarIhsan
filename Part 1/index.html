@@ -6,6 +6,52 @@
         <title>Lab 4 API</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+  <body>
+   <header>
         <div class="container">
-        <h1>The New York Times</h1>
+        <h1>New York Times API</h1>
+        </div>
+    </header>
+
+   
+    <section  class= "content">
+        
+        <aside class = "filter">
+        <h2>Filter</h2>
+        <h3>Sort By:</h3>
+        <label>
+        <input type = "radio" name = "sort" value = "viewed" checked> Most Viewed
+        </label>
+
+        <label>
+        <input type = "radio" name = "sort" value = "shared"> Most Shared
+        </label>
+
+        <label>
+        <input type = "radio" name = "sort" value = "emailed"> Most Emailed
+        </label>
+
+        <h3>Time Frame:</h3>
+
+        <label>
+        <input type = "radio" name = "period" value = "1" checked> Day
+        </label>
+
+        <label>
+        <input type = "radio" name = "period" value = "7"> Week
+        </label>
+
+        <label>
+        <input type = "radio" name = "period" value = "30"> Month
+        </label>
+
+        </aside>
+
+        <section id="articles" class="articles">
+            <h1>Top 5 Articles: Needed to implement API to update for each selection of Time Frame</h1>
+        </section>
+
+    </section>
+<script src="main.js"></script>
+</body>
+</html> 
