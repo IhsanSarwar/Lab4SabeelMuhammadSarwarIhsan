@@ -17,18 +17,36 @@ console.log("URL is: ", url);
 fetch(url)
    .then(res => res.json()) .then(data => {  
     if(data.results){
- console.log("API data:", data);
- console.log("First article:", data.results[0]);
- const articles = document.querySelector("#articles");
- articlesSection.innerHTML = "";
- //Finish this card and article section
- for(i = 0; i < 5; ++i){
-    const article = data.results[i];
-    innerHTML +=
-    <div class = "card"
+        console.log("API data:", data);
+        console.log("First article:", data.results[0]);
 
-}
+        const articles = document.querySelector("#articles");
+        articles.innerHTML = "";
+ //Finish this card and article section
+        let articlesShown = 0;
+        for(let i = 0; i < 20 && articlesShown < 5; i++){
+            try{
+            const article = data.results[i];
+
+            articles.innerHTML += `
+            <div class = "articlecard"> 
+            <img src = "${article.media[0]["media-metadata"][2].url}" alt = "${article.title}" class = "articleimg">
+            
+            <div class = "articletext">
+             <h2>${article.title}</h2>
+             <p>${article.abstract}</p>
+             <p>${article.published_date}</p>
+            </div>
+           
+            </div>`;
+
+            articlesShown++;
+        }
+        catch(err){
+            console.log("Skipped Article: ", i);
+        }
     }
+    }  
     else {
  console.log("No results found");    
     }
