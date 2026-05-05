@@ -7,7 +7,7 @@ async function GetSelectedFilters(){
 console.log("Selected sort:", selectedSort);
 console.log("Selected period:", selectedPeriod);
 
-const api = "p8gJcEJnGeNroE3dRfjU7xL35UOjS8ISoAibAD0sGMGAgF1v";
+const api = "MzF474tgMsTOlMpb5FPmneofRkgcTZIBw0r0kcTEWtaiJqSS";
 //You need to use ` ` to allow for ${} your specific input to change
 const url = `https://api.nytimes.com/svc/mostpopular/v2/${selectedSort}/${selectedPeriod}.json?api-key=${api}`;
 console.log("URL is: ", url);
